@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link href="https://fonts.googleapis.com/css?family=Amatic+SC|Playfair+Display&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Josefin+Slab&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Julius+Sans+One&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style1.css">
+    <title>Pop Up</title>
+</head>
+<div class="hide" id="hidden">
+    <div id="popup">
+        <form class="login-form">
+            <div class="form-header">
+                <h1 style="font-family: 'Josefin Slab', serif;">Register</h1><hr>
+            </div>
+            <div class="form-content">
+                <label for="email">Email</label><br>
+                <input type="text" id="email" placeholder="Enter Email" name="email"><br>
+                <label for="pwd">Password</label><br>
+                <input type="text" id="pwd" placeholder="Enter Password" name="pswd"><br>
+                <button type="submit" onClick="validiate()">Submit</button>
+            </div>
+        </form>
+    </div>
+</div>
+
+<body>
+<div id="main-content">
+<header>
+    <div id="img1"></div>
+    <div id="img2"></div>
+    <div id="img3"></div>
+    <div id="img4"></div>
+    <div id="img5"></div>
+    <nav>
+        <li>
+            <a href="#">About</a>
+        </li>
+        <li>
+            <a href="#">Stories</a>
+        </li>
+        <li>
+            <a href="#">Gallery</a>
+        </li>
+    </nav>
+    <div class="heading">
+        <h1>Let's Find Some Beautiful Place<br>To Get Lost</h1>
+    </div>
+    <div id="box">
+        <button id="bttn" onClick=clickme()>Travel With Us!</button>    
+    </div>
+    
+</header>
+</div>
+
+
+
+
+    <script>
+    function clickme()
+    {
+        document.getElementById('popup').style.display='block';
+        document.getElementById('hidden').style.display='block';
+        document.getElementById('main-content').style.opacity='0.6';
+    }    
+    var modal=document.getElementById('hidden');    
+   document.addEventListener('click',function()
+    {
+        if(event.target==modal){
+     modal.style.display="none";
+     document.getElementById('main-content').style.opacity='1';
+    }
+        
+    });
+    function validiate(){
+        var email=document.getElementById("email").value;
+        var emailregex=/[a0-z9]@[a-z][.com]/g;
+        var pwd=document.getElementById("pwd").value;
+        var passwordregex=/[aA0-zZ9]/g;
+        if(!emailregex.test(email))
+        {
+            alert("Please enter a valid Username");
+        }
+        if(!passwordregex.test(pwd))
+        {
+            alert("Enter only Alphanumeric value");
+        }
+
+    }
+
+    </script>
+</body>
+</html>

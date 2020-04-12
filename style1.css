@@ -1,0 +1,252 @@
+.hide{
+    width:100vw;
+    height:100vh;
+    position: fixed;
+    top:0px;
+    left:0px;
+    z-index:2;
+    display:none;
+}
+#main-content{
+    opacity: 1;
+}
+h1{
+    font-family: 'Courier New', Courier, monospace;
+}
+
+button{
+    font-size:15px;
+    padding:10px 20px 10px 20px;
+    border:2px solid #f1f1f1;
+    border-radius: 20px;
+    text-decoration: none;
+    background-color: white;
+}
+#popup{
+    display:none;
+    padding:80px;
+    position:absolute;
+    background:#f1f1f1;
+    border-radius:5px;
+    text-align: center;
+    z-index:3;
+    width:300px;
+    height: 400px;
+    top:50%;
+    left:50%;
+    transform:translate(-50%,-50%) ;
+    box-shadow: 0px 0px 50px 1px #000;
+}
+#box{
+    right: 0;
+    position: absolute;
+}
+body{
+    margin:0px auto;
+    padding:0px auto;
+    overflow-x: hidden;
+}
+nav{
+    background-color:transparent;
+    width:100vw;
+    position:absolute;
+    top:0px;
+}
+li{
+    display:flex;
+    padding:10px;
+    padding-top:15px;
+    position:relative;
+    display:inline-block;
+}
+a{
+    font-family: 'Julius Sans One', sans-serif;
+    font-style: bold;
+    font-size: 20px;
+    color:black;
+    text-decoration: none;
+    transition: 0.5s all ease-in-out;
+}
+a:hover{
+    color:whitesmoke;
+    font-size:30px;
+}
+header{
+    height:100vh;
+    width:100vw;
+    text-align:center;
+}
+#img1{
+    position:absolute;
+    top:0;
+    height:100vh;
+    width:100vw;
+    background: url("https://images.unsplash.com/photo-1503220317375-aaad61436b1b?ixlib=rb-1.2.1&auto=format&fit=crop&w=1950&q=80");
+    text-align: center;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    overflow-y:hidden;
+    animation-name:background_change1;
+    animation-iteration-count: infinite;
+    animation-duration: 10s;
+}
+#img2{
+    position: absolute;
+    top:0;
+    height:100vh;
+    width:100vw;
+    background: url("https://images.unsplash.com/photo-1491446559770-3fc03a481cdf?ixlib=rb-1.2.1&auto=format&fit=crop&w=1050&q=80");
+    text-align: center;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    overflow-y:hidden;
+    animation-name:background_change2;
+    animation-iteration-count: infinite;
+    animation-duration:10s;
+}
+#img3{
+    position: absolute;
+    top:0;
+    height:100vh;
+    width:100vw;
+    background: url("https://images.unsplash.com/photo-1487119998088-a65531a3ae5c?ixlib=rb-1.2.1&auto=format&fit=crop&w=1051&q=80");
+    text-align: center;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    overflow-y:hidden;
+    animation-name:background_change3;
+    animation-iteration-count: infinite;
+    animation-duration:10s;
+}
+#img4{
+    position: absolute;
+    top:0;
+    height:100vh;
+    width:100vw;
+    background: url("https://images.unsplash.com/reserve/brBe5pGVSwGi0dC3192U_Sunset%20in%20Dunhuang.jpg?ixlib=rb-1.2.1&auto=format&fit=crop&w=1954&q=80");
+    text-align: center;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    overflow-y:hidden;
+    animation-name:background_change4;
+    animation-iteration-count: infinite;
+    animation-duration:10s;
+}
+
+@keyframes background_change1{
+    0%{
+        opacity: 0;
+    }
+    25%{
+        opacity: 1;
+    }
+    50%{
+        opacity: 0;
+    }
+    75%{
+        opacity: 0;
+    }
+    100%{
+        opacity: 0;
+    }
+}
+@keyframes background_change2{
+    0%{
+        opacity: 0;
+    }
+    25%{
+        opacity: 0;
+    }
+    50%{
+        opacity: 1;
+    }
+    75%{
+        opacity: 0;
+    }
+    100%{
+        opacity: 0;
+    }
+
+}
+@keyframes background_change3{
+    0%{
+        opacity: 0;
+    }
+
+    25%{
+        opacity: 0;
+    }
+    50%{
+        opacity: 0;
+    }
+    75%{
+        opacity: 1;
+    }
+    100%{
+        opacity:0;
+    }
+}
+@keyframes background_change4{
+
+    0%{
+        opacity:1;
+    }
+    25%{
+        opacity: 0;
+    }
+    50%{
+        opacity: 0;
+    }
+    75%{
+        opacity: 0;
+    }
+    100%{
+        opacity:1;
+    }
+}
+
+
+.heading h1{
+    font-family: 'Amatic SC', cursive;
+    font-size:45px;
+    color:white;
+    letter-spacing: 3px;
+}
+.heading{
+    position: absolute;
+    top:45%;
+    left:25%;
+    transform:translate(-40%,-40%);
+}
+#box{
+    position: absolute;    
+    top:60%;
+    left:21%;
+    transform:translate(-40%,-40%);
+}
+.login-form{
+    text-align: left;
+}
+input[type=text]{
+    padding:10px 20px;
+    border:1px solid #ccc;
+    border-radius:3px;
+    margin:8px 0px;
+}
+@media only screen and (max-width: 768px) {
+    nav li{
+        display:flex;
+        flex-direction: column;
+    }
+    #box{
+        top:65%;
+    }
+    .heading h1{
+        font-size:30px;
+    }
+  }
+
